@@ -8,17 +8,21 @@ import pytest
 @pytest.mark.parametrize(
     "result, rating_change_sign",
     [
-        (Result.PLAYER_A_WIN, 1),   # A should gain, B should lose
+        (Result.PLAYER_A_WIN, 1),  # A should gain, B should lose
         (Result.PLAYER_B_WIN, -1),  # A should lose, B should gain
-        (Result.DRAW, 0),           
-    ]
+        (Result.DRAW, 0),
+    ],
 )
 def test_elo_update_strategy(result, rating_change_sign):
     player_a_initial_rating = 1500
     player_b_initial_rating = 1600
 
-    player_a = Player(player_id=1, true_skill=1200, rating=player_a_initial_rating, k_factor=30)
-    player_b = Player(player_id=2, true_skill=1300, rating=player_b_initial_rating, k_factor=30)
+    player_a = Player(
+        player_id=1, true_skill=1200, rating=player_a_initial_rating, k_factor=30
+    )
+    player_b = Player(
+        player_id=2, true_skill=1300, rating=player_b_initial_rating, k_factor=30
+    )
 
     strategy = EloUpdateStrategy()
     strategy.update(player_a, player_b, result)

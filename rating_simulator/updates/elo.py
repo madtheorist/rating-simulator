@@ -10,7 +10,6 @@ class EloUpdateStrategy(BaseUpdateStrategy):
     """
 
     def update(self, player_a: Player, player_b: Player, result: Result) -> None:
-
         expected_score_a = 1 / (1 + 10 ** ((player_b.rating - player_a.rating) / 400))
         expected_score_b = 1 / (1 + 10 ** ((player_a.rating - player_b.rating) / 400))
 
