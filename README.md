@@ -19,5 +19,5 @@ In short: lets you simulate games between players with hidden “true skill” v
 
 - Elo rating system (with optional draw probability)
 - Random pairing strategy
-- 
+  
 Planned features: more pairing strategies (round-robin, Swiss) and rating systems (Glicko, TrueSkill); more simulation options (noisiness, league formats)
