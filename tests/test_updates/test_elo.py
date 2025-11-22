@@ -3,7 +3,7 @@ from unittest.mock import patch
 import pytest
 
 from rating_simulator.core.models import GameResult, Player
-from rating_simulator.updates.elo import EloUpdateStrategy
+from rating_simulator.update_strategies.elo import EloUpdateStrategy
 
 
 def test_elo_play_game():

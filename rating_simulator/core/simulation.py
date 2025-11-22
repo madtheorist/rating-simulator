@@ -7,16 +7,16 @@ from rating_simulator.core.models import (
     PlayerHistoryRecord,
     SimulationHistoryRecord,
 )
-from rating_simulator.pairing.base import BasePairingStrategy
-from rating_simulator.updates.base import BaseUpdateStrategy
+from rating_simulator.pairing_strategies.base import PairingStrategy
+from rating_simulator.update_strategies.base import UpdateStrategy
 
 
 class Simulation:
     def __init__(
         self,
         players: list[Player],
-        pairing_strategy: BasePairingStrategy,
-        update_strategy: BaseUpdateStrategy,
+        pairing_strategy: PairingStrategy,
+        update_strategy: UpdateStrategy,
         num_rounds: int = 100,
     ) -> None:
         self.players = players

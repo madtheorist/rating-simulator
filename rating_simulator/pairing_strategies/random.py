@@ -2,10 +2,10 @@ import random
 from typing import Callable, Iterator
 
 from rating_simulator.core.models import Player
-from rating_simulator.pairing.base import BasePairingStrategy
+from rating_simulator.pairing_strategies.base import PairingStrategy
 
 
-class RandomPairingStrategy(BasePairingStrategy):
+class RandomPairingStrategy(PairingStrategy):
     def __init__(self, shuffle_func: Callable = random.shuffle):
         self.shuffle_func = shuffle_func
 

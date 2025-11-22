@@ -1,6 +1,6 @@
 from rating_simulator.core.simulation import Simulation, create_players
-from rating_simulator.pairing.random import RandomPairingStrategy
-from rating_simulator.updates.elo import EloUpdateStrategy
+from rating_simulator.pairing_strategies.random import RandomPairingStrategy
+from rating_simulator.update_strategies.elo import EloUpdateStrategy
 
 if __name__ == "__main__":
     players = create_players(num_players=200)

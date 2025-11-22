@@ -4,7 +4,7 @@ from typing import Iterator
 from rating_simulator.core.models import Player
 
 
-class BasePairingStrategy(ABC):
+class PairingStrategy(ABC):
     @abstractmethod
     def generate_pairs(
         self, players: list[Player], num_rounds: int

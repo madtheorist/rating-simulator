@@ -1,10 +1,10 @@
 import random
 
 from rating_simulator.core.models import GameResult, Player
-from rating_simulator.updates.base import BaseUpdateStrategy
+from rating_simulator.update_strategies.base import UpdateStrategy
 
 
-class EloUpdateStrategy(BaseUpdateStrategy):
+class EloUpdateStrategy(UpdateStrategy):
     """Implementation of a basic ELO update strategy.
 
     Performance is approximated as a logistic curve with base 10.

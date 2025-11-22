@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from rating_simulator.core.models import GameResult, Player
 
 
-class BaseUpdateStrategy(ABC):
+class UpdateStrategy(ABC):
     @abstractmethod
     def play_game(self, player_a: Player, player_b: Player) -> GameResult:
         """Simulate a game between Player A and Player B based on their true skill and return the outcome."""

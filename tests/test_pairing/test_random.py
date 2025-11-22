@@ -1,7 +1,7 @@
 import pytest
 
 from rating_simulator.core.models import Player
-from rating_simulator.pairing.random import RandomPairingStrategy
+from rating_simulator.pairing_strategies.random import RandomPairingStrategy
 
 
 def test_random_pairing_with_no_players():
