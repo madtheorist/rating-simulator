@@ -11,7 +11,7 @@ class BaseUpdateStrategy(ABC):
 
     @abstractmethod
     def update_ratings(
-        self, player_a: Player, player_b: Player, result: GameResult
+        self, player_a: Player, player_b: Player, game_result: GameResult
     ) -> None:
         """Updates the ratings of player A and player B based on the result of the game."""
         raise NotImplementedError()

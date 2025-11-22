@@ -35,4 +35,6 @@ class PlayerHistoryRecord:
 @dataclass
 class SimulationHistoryRecord:
     round_number: int
-    game_history: list[tuple[Player, Player, GameResult]]
+    game_history: list[
+        tuple[int, int, GameResult]
+    ]  # player A id, player B id, GameResult
