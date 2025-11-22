@@ -14,9 +14,9 @@ class EloUpdateStrategy(BaseUpdateStrategy):
         expected_score_b = 1 / (1 + 10 ** ((player_a.rating - player_b.rating) / 400))
 
         if result == Result.PLAYER_A_WIN:
-            actual_score_a, actual_score_b = 1, 0
+            actual_score_a, actual_score_b = 1.0, 0.0
         elif result == Result.PLAYER_B_WIN:
-            actual_score_a, actual_score_b = 0, 1
+            actual_score_a, actual_score_b = 0.0, 1.0
         else:
             actual_score_a, actual_score_b = 0.5, 0.5
 

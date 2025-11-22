@@ -2,7 +2,7 @@ class Player:
     def __init__(
         self,
         player_id: int,
-        true_skill: float,
+        true_skill: float = 1500.0,
         rating: float = 1500.0,
         k_factor: float = 32,
     ):
