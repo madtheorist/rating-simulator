@@ -12,6 +12,7 @@ class RandomPairingStrategy(BasePairingStrategy):
     def generate_pairs(
         self, players: list[Player], num_rounds: int
     ) -> Iterator[list[tuple[Player, Player]]]:
+        """For each round, yield a list of random pairings."""
         if len(players) % 2 == 1:
             raise ValueError("Need an even number of players.")
 

@@ -1,4 +1,4 @@
-from rating_simulator.core.models import Player
+from rating_simulator.core.models import Player, SimulationHistoryRecord
 from rating_simulator.pairing.base import BasePairingStrategy
 from rating_simulator.updates.base import BaseUpdateStrategy
 
@@ -15,4 +15,4 @@ class Simulation:
         self.pairing_strategy = pairing_strategy
         self.update_strategy = update_strategy
         self.num_rounds = num_rounds
-        self.history = []
+        self.history: list[SimulationHistoryRecord] = []
