@@ -1,7 +1,6 @@
 import pytest
 
-from rating_simulator.core.models import Result
-from rating_simulator.core.player import Player
+from rating_simulator.core.models import Player, Result
 from rating_simulator.updates.elo import EloUpdateStrategy
 
 
