@@ -1,5 +1,5 @@
-from rating_simulator.core.player import Player
 from rating_simulator.core.models import Result
+from rating_simulator.core.player import Player
 from rating_simulator.updates.base import BaseUpdateStrategy
 
 

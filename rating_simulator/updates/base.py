@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
-from rating_simulator.core.player import Player
+
 from rating_simulator.core.models import Result
+from rating_simulator.core.player import Player
 
 
 class BaseUpdateStrategy(ABC):

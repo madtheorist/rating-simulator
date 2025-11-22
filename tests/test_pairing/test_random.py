@@ -1,4 +1,5 @@
 import pytest
+
 from rating_simulator.core.player import Player
 from rating_simulator.pairing.random import RandomPairingStrategy
 

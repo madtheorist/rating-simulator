@@ -1,8 +1,8 @@
-from rating_simulator.core.player import Player
-from rating_simulator.pairing.base import BasePairingStrategy
+import random
 from typing import Callable
 
-import random
+from rating_simulator.core.player import Player
+from rating_simulator.pairing.base import BasePairingStrategy
 
 
 class RandomPairingStrategy(BasePairingStrategy):

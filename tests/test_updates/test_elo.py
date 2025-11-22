@@ -1,8 +1,8 @@
-from rating_simulator.updates.elo import EloUpdateStrategy
-from rating_simulator.core.player import Player
-from rating_simulator.core.models import Result
-
 import pytest
+
+from rating_simulator.core.models import Result
+from rating_simulator.core.player import Player
+from rating_simulator.updates.elo import EloUpdateStrategy
 
 
 @pytest.mark.parametrize(

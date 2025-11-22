@@ -1,5 +1,6 @@
-from rating_simulator.core.player import Player
 from abc import ABC, abstractmethod
+
+from rating_simulator.core.player import Player
 
 
 class BasePairingStrategy(ABC):
