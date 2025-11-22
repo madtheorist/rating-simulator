@@ -29,7 +29,7 @@ print(player_1.true_skill) # get the true skill of the player. The rating should
 ```
 The below plot shows the ELO rating evolution over 4000 games of an example player in a pool of 200 players, all with a fixed starting rating of 1500, using the `RandomPairingStrategy`. Convergence (as measured by when the rolling mean absolute error reaches a stable level) seems to happen after around 500 games in this case.
 
-![Rating convergence example](docs/rating_convergence_example.png)
+<img src="docs/rating_convergence_example.png" alt="Alt text" width="600"/>
 
 The package currently supports:
 
