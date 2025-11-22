@@ -1,2 +1,2 @@
 # rating-simulator
-A python package that can run simulations with different rating systems in zero-sum games
+A Python package for simulating zero-sum games using Monte Carlo methods with customizable rating systems.
