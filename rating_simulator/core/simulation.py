@@ -24,8 +24,15 @@ class Simulation:
         self.update_strategy = update_strategy
         self.num_rounds = num_rounds
         self.history: list[SimulationHistoryRecord] = []
+        self._has_run = False
+
+    def __repr__(self):
+        return f"Simulation(num_players={len(self.players)}, num_rounds={self.num_rounds})"
 
     def run(self) -> None:
+        if self._has_run:
+            raise RuntimeError("The simulation is already completed.")
+        
         for round_number, round_pairings in enumerate(
             self.pairing_strategy.generate_pairs(self.players, self.num_rounds)
         ):
@@ -44,6 +51,7 @@ class Simulation:
                     (player_a.player_id, player_b.player_id, game_result)
                 )
             self.history.append(SimulationHistoryRecord(round_number, game_history))
+        self._has_run = True
 
 
 def create_players(
@@ -51,11 +59,12 @@ def create_players(
     initial_rating: float = 1500,
     skill_mean: float = 1500,
     skill_std: float = 200,
+    k_factor: float = 20,
 ) -> list[Player]:
     players = []
     for i in range(num_players):
         true_skill = np.random.normal(skill_mean, skill_std)
         players.append(
-            Player(player_id=i, true_skill=true_skill, rating=initial_rating)
+            Player(player_id=i, true_skill=true_skill, rating=initial_rating, k_factor=k_factor)
         )
     return players

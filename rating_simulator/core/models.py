@@ -17,7 +17,7 @@ class Player:
         self.history: list[PlayerHistoryRecord] = []
 
     def __repr__(self):
-        return f"Player(player_id={self.player_id}, true_skill={self.true_skill:.2f}, rating={self.rating:.2f}"
+        return f"Player(player_id={self.player_id}, true_skill={self.true_skill:.2f}, rating={self.rating:.2f})"
 
 
 class GameResult(Enum):
